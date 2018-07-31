@@ -19,8 +19,8 @@ should be increased.
 
   Also, to be noted, as the rpms increase the light intensity 
 received from the photoresistor decreases significantly. Hence
-with an incorrect revolution threshold, it may be possible 
-that the white piece of paper may not be noted. For more 
+with an incorrect revolution threshold (average + SIGNIFICANT_SCORE * stanDev), 
+it may be possible that the white piece of paper may not be noted. For more 
 insight look at the (images posted)[../../Images].
 
 Images:
