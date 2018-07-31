@@ -39,6 +39,8 @@ Inexpensive Arduino Speedometer
     Real data from Arduino's Serial plotter with a SIGNIFICANT_SCORE = 0.
     This decision is evident in the data as, the peaks may have been missed
     if the revolution threshold was not equal to the mean.
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Full_Throttle_Data.png "Full Throttle data")
+  
 ####  [Revolutions_Missed](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png):
     Real data from the rotating wheel showing how a wrong revolution threshold 
     (SIGNIFICANT_SCORE deviations from the mean) may result in missing a rotation. 
