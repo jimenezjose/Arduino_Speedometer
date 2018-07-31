@@ -14,7 +14,7 @@ Inexpensive Arduino Speedometer
     a discrete factor, a photoresistor is used as a light sensor 
     and an LED for noise control.
 
-### Implentation details:
+### Implementation details:
       The light intensity of the black wheel has a standard 
     deviation of 0.0. Although, I am calculating for the 
     standard deviation of the wheels data, I noted that
