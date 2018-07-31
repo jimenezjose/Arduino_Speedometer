@@ -9,7 +9,7 @@ Inexpensive Arduino Speedometer
     White piece of paper
 
 ### Idea:
-    There is drastic change of light intensity from a material
+      There is drastic change of light intensity from a material
     that is black to a material that is white. To exploit such
     a discrete factor, a photoresistor is used as a light sensor 
     and an LED for noise control.
