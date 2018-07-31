@@ -1,5 +1,5 @@
 # Arduino_Speedometer
-Inexpensive Arduino Speedometer add-on
+Inexpensive Arduino Speedometer 
 
 ### Materials Needed
     Photoresister 
