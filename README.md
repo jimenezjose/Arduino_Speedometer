@@ -26,7 +26,7 @@ Inexpensive Arduino Speedometer
     received from the photoresistor decreases significantly. Hence
     with an incorrect revolution threshold (average + SIGNIFICANT_SCORE * stanDev), 
     it may be possible that the white piece of paper may not be noted. For more 
-    insight look at the images posted.
+    insight look at image "Revolutions_Missed".
 
 ### [Images](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images):
 
