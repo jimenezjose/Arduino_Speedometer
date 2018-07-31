@@ -29,17 +29,17 @@ Implentation details:
 
 [Images](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images):
 
-  [Protype_Concept](../../Images/Protype_Concept):
+  [Protype_Concept](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg):
     What do you mean by only a photoresistor, an LED, and a white strip of 
     of paper? 
-  [Speedometer_data](../../Images/Speedometer_data):
+  [Speedometer_data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png):
     Real data from the a rotating wheel with a 0.25 SIGNIFICANT_SCORE.
     Every peak of light sensor data is the white strip of paper! 
-  [Full_Throttle_Data](../../Images/Full_Throttle_Data):
+  [Full_Throttle_Data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Full_Throttle_Data.png):
     Real data from Arduino's Serial plotter with a SIGNIFICANT_SCORE = 0.
     This decision is evident in the data as, the peaks may have been missed
     if the revolution threshold was not equal to the mean.
-  [Revolutions_Missed](../../Images/Revolutions_Missed):
+  [Revolutions_Missed](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png):
     Real data from the rotating wheel showing how a wrong revolution 
     threshold (SIGNIFICANT_SCORE deviations from the mean) may result in 
     missing a ratation. The circled sections from the image demonstrate how
