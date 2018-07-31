@@ -25,9 +25,9 @@ Implentation details:
   received from the photoresistor decreases significantly. Hence
   with an incorrect revolution threshold (average + SIGNIFICANT_SCORE * stanDev), 
   it may be possible that the white piece of paper may not be noted. For more 
-  insight look at the [images posted](../../Images).
+  insight look at the [images posted](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images).
 
-[Images](../../Images):
+[Images](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images):
 
   [Protype_Concept](../../Images/Protype_Concept):
     What do you mean by only a photoresistor, an LED, and a white strip of 
