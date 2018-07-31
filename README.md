@@ -40,7 +40,10 @@ Implentation details:
     This decision is evident in the data as, the peaks may have been missed
     if the revolution threshold was not equal to the mean.
   [Revolutions_Missed](../../Images/Revolutions_Missed):
-
+    Real data from the rotating wheel showing how a wrong revolution 
+    threshold (SIGNIFICANT_SCORE deviations from the mean) may result in 
+    missing a ratation. The circled sections from the image demonstrate how
+    a peak did not surpass the green line (revolution threshold).
 
 
 
