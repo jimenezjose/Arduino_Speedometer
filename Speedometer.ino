@@ -8,12 +8,14 @@
 File Name:       Speedometer.ino
 Description:     With a white strip of paper, a photoresister, and an
                  LED, a speedometer can be easily implemented using 
-                 statistical hypothesis testing with a significance level
-                 of 0.1%.
+                 statistical testing. the first seconds of the program 
+                 will be used to collect data and calculate the standard
+                 deviation and the mean. Ensure that the respective wheel 
+                 is rotating for a positively skewed mean 
+                 (skewed mean compaered to a mean from a non-rotating wheel)
 ****************************************************************************/
 #define SAMPLE_SIZE 100
-#define SIGNIFICANT_SCORE 3 /* p-value(x < 3) = 99% */
-#define ONE_SECOND 1000     /* speedmoter respond time */
+#define SIGNIFICANT_SCORE 0  /* Number of Standard Deviations from the Mean */
 
 void populateData( int *, int, const int );
 double getAverage( int *, int );
@@ -28,6 +30,7 @@ double stanDev = 0;              /* standard deviation from data */
 boolean reading = true;          /* ready for white line to pass */
 unsigned long previousMillis = 0;/* used for calculating time without delays */
 long revolutions = 0;            /* revoultions of wheel */
+long maxRPM = 0;
 
 void setup() {
   Serial.begin( 9600 );
@@ -40,46 +43,56 @@ void setup() {
   populateData( data, SAMPLE_SIZE, sensorPin );
   average = getAverage( data, SAMPLE_SIZE );
   stanDev = getStanDev( data, SAMPLE_SIZE, average );
-
+ 
   Serial.print( "Average: " );
   Serial.println( average );
   Serial.print( "Standard Deviation: " );
   Serial.println( stanDev );
-  
+   
 }
 
 void loop() {
 
   int currLight = analogRead( sensorPin );
   double Z_Score = (currLight - average) / stanDev;
-  
+      
   if( reading && Z_Score > SIGNIFICANT_SCORE ) {
     /* 1 revolution noted */
     revolutions++;
-    Serial.println( "White line marked" );
-    Serial.print( "CurrLight: " );
-    Serial.println( currLight );
-    Serial.print( "Z Score: " );
-    Serial.println( Z_Score );
     reading = false;
   }
-  else if( !reading && Z_Score <= 0 ) {
+  else if( !reading && Z_Score <= SIGNIFICANT_SCORE) {
     reading = true;
   }
 
   unsigned long currentMillis = millis();
-  if( revolutions && currentMillis - previousMillis >= ONE_SECOND ) {
+  if( revolutions /*&& currentMillis - previousMillis >= ONE_SECOND*/ ) {
     /* revolutions per minute */
-    double dt = (currentMillis - previousMillis);
+    double dt = currentMillis - previousMillis;
     dt = dt * (1.0 / 1000) * ( 1.0 / 60);
     long rpm = revolutions / dt;
-    //Serial.print( "revolutions: " );
-    //Serial.println( revolutions );
-    Serial.print( "rpm: " );
-    Serial.println( rpm );
+    //Serial.print( "rpm: " );
+    //Serial.println( rpm );
     previousMillis = currentMillis;
-    revolutions = 0;
-  } 
+    //revolutions = 0;
+
+    if( revolutions > average + stanDev * SIGNIFICANT_SCORE ) {
+      revolutions = 0;
+    }
+    if( rpm > maxRPM ) {
+      /* new max */
+      maxRPM = rpm;
+    }
+  }
+
+    Serial.print( revolutions );
+    Serial.print( "\t" );
+    //Serial.print( "Y: " );
+    Serial.print( currLight );
+    Serial.print( "\t" );
+    Serial.print( average + SIGNIFICANT_SCORE * stanDev );
+    Serial.print( "\t" );
+    Serial.println( average );
 
 }
 
@@ -95,6 +108,8 @@ void loop() {
 ***************************************************************************/
 void populateData( int * data, int dataSize, const int sensorPin ) {
   long lightValue = 0; /* data from sensor pin */
+  
+  delay( 50 );
   
   for( int index = 0; index < dataSize; index++ ) {
     /* reading data */
