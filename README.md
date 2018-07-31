@@ -1,2 +1,8 @@
 # Arduino_Speedometer
-Arduino Speedometer add-on
+Inexpensive Arduino Speedometer add-on
+
+Material Needed
+
+Photoresister 
+LED
+White piece of paper
