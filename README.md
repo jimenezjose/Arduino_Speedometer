@@ -9,9 +9,9 @@ Inexpensive Arduino Speedometer
     White strip of paper
 
 ### Idea:
-        There is drastic change of light intensity from a material that is black to a material that is white. 
-      To exploit such a discrete factor, a photoresistor is used as a light sensor and an LED for noise 
-      control.
+      There is drastic change of light intensity from a material that is black to a material that is white. 
+    To exploit such a discrete factor, a photoresistor is used as a light sensor and an LED for noise 
+    control.
 
 ### Implementation details:
       The light intensity of the black wheel has a standard  deviation of 0.0. Although, I am calculating 
