@@ -46,7 +46,7 @@ Inexpensive Arduino Speedometer
     (SIGNIFICANT_SCORE deviations from the mean) may result in missing a rotation. 
     The circled sections from the image demonstrate how a peak did not surpass the 
     green line (revolution threshold).
-
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png "Revolutions Missed")
 
 
              
