@@ -43,7 +43,7 @@ Inexpensive Arduino Speedometer
 ####  [Revolutions_Missed](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png):
     Real data from the rotating wheel showing how a wrong revolution 
     threshold (SIGNIFICANT_SCORE deviations from the mean) may result in 
-    missing a ratation. The circled sections from the image demonstrate how
+    missing a rotation. The circled sections from the image demonstrate how
     a peak did not surpass the green line (revolution threshold).
 
 
