@@ -1,7 +1,7 @@
 # Arduino_Speedometer
 Inexpensive Arduino Speedometer 
 
-### Materials Needed
+### __Materials Needed__
     Photoresistor 
     
     LED
