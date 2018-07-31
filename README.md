@@ -21,7 +21,7 @@ should be increased.
 received from the photoresistor decreases significantly. Hence
 with an incorrect revolution threshold (average + SIGNIFICANT_SCORE * stanDev), 
 it may be possible that the white piece of paper may not be noted. For more 
-insight look at the (images posted)[../../Images].
+insight look at the [images posted](../../Images).
 
 Images:
 
