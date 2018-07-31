@@ -1,19 +1,19 @@
 # Arduino_Speedometer
 Inexpensive Arduino Speedometer add-on
 
-Materials Needed
+### H3 Materials Needed
 
 Photoresister 
 LED
 White piece of paper
 
-Idea:
+### H3 Idea:
     There is drastic change of light intensity from a material 
   that is black to a material that is white. To exploit such
   a discrete factor, a photoresistor is used as a light sensor 
   and an LED for noise control.
 
-Implentation details:
+### H3 Implentation details:
     The light intensity of the black wheel has a standard 
   deviation of 0.0. Although, I am calculating for the 
   standard deviation of the wheels data, I noted that
@@ -27,7 +27,7 @@ Implentation details:
   it may be possible that the white piece of paper may not be noted. For more 
   insight look at the [images posted](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images).
 
-[Images](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images):
+### H3 [Images](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images):
 
   [Protype_Concept](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg):
     What do you mean by only a photoresistor, an LED, and a white strip of 
