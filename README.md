@@ -6,7 +6,7 @@ Inexpensive Arduino Speedometer
     
     LED
     
-    White piece of paper
+    White strip of paper
 
 ### Idea:
         There is drastic change of light intensity from a material that is black to a material that is white. 
