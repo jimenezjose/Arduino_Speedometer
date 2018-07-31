@@ -28,6 +28,8 @@ Inexpensive Arduino Speedometer
 ####  [Protype_Concept](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg):
     What do you mean by only a photoresistor, an LED, and a white strip of 
     of paper? 
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg "Prototype")
+
 ####  [Speedometer_data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png):
     Real data from the a rotating wheel with a 0.25 SIGNIFICANT_SCORE.
     Every peak of light sensor data is the white strip of paper! 
