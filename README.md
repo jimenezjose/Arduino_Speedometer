@@ -50,9 +50,10 @@ Inexpensive Arduino Speedometer
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png "Revolutions Missed")
 
 #### [UPDATE]: [Noise_Control](../):
-    As mentioned in the Readme section "implementation detail", when the photoresistor is under a constant light 
-    intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light sensor value 
-    randomly deviate between two adjacent integers under no light differential. Resulting to beautiful discrete 
-    light values.
+    As mentioned in the Readme section "implementation detail", when the 
+    photoresistor is under a constant light intensity, the light sensor values 
+    deviate with a standard deviation of 1.0. Meaning the light sensor value randomly
+    deviate between two adjacent integers under no light differential. Resulting to 
+    beautiful discrete light values.
 
              
