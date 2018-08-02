@@ -60,5 +60,4 @@ __After:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")
 
 #### [New_Speedometer_Data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png):
-![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png "Noise Control2")
