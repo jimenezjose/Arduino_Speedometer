@@ -52,6 +52,8 @@ Inexpensive Arduino Speedometer
     light intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light
     sensor value randomly deviate between two adjacent integers under no light differential. Resulting to 
     beautiful discrete light values.
+__Before:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/No_Noise_Control.png "No Noise Control")
+__Now:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")         
 
