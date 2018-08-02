@@ -14,7 +14,7 @@ Inexpensive Arduino Speedometer
     control.
 
 ### Implementation details:
-      The light intensity of the black wheel has a standard  deviation close to 0.0. Although, I am  
+      The light intensity of the black wheel has a standard  deviation 1.0. Although, I am  
     calculating for the standard deviation of the wheels data, I noted that it may not always be  
     necessary. Hence for the symbolic constant SIGNIFICANT_SCORE = 0 in the code. Of course if  
     necessary, under noisy conditions the SIGNIFICANT_SCORE value should be increased. 
