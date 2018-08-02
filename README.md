@@ -30,6 +30,21 @@ Inexpensive Arduino Speedometer
     What do you mean by only a photoresistor, an LED, and a white strip of of paper? 
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg "Prototype")
 
+#### [UPDATE]: [Noise_Control](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png):
+    As mentioned in the Readme section "implementation detail", when the photoresistor is under a constant
+    light intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light
+    sensor value randomly deviate between two adjacent integers under no light differential. Therefore,
+    as a solution: once the current light value has a differential greater than 1.0 then the current
+    sensor reading is validated, otherwise the current light value is considered noise and thus disregarded.
+    Resulting to beautiful discrete light values.
+__Before:__
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/No_Noise_Control.png "No Noise Control")
+__After:__
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")
+
+#### [New_Speedometer_Data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png):
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png "Noise Control2")
+
 ####  [Speedometer_data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png):
     Real data from the a rotating wheel with a 0.25 SIGNIFICANT_SCORE. Every peak of light sensor data is 
     the white strip of paper! 
@@ -46,18 +61,3 @@ Inexpensive Arduino Speedometer
     from the image demonstrate how a peak did not surpass the green line (revolution threshold) and hence 
     missing a wheel rotation.
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png "Revolutions Missed")
-
-#### [UPDATE]: [Noise_Control](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png):
-    As mentioned in the Readme section "implementation detail", when the photoresistor is under a constant
-    light intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light
-    sensor value randomly deviate between two adjacent integers under no light differential. Therefore,
-    as a solution: once the current light value has a differential greater than 1.0 then the current
-    sensor reading is validated, otherwise the current light value is considered noise and thus disregarded.
-    Resulting to beautiful discrete light values.
-__Before:__
-![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/No_Noise_Control.png "No Noise Control")
-__After:__
-![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")
-
-#### [New_Speedometer_Data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png):
-![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png "Noise Control2")
