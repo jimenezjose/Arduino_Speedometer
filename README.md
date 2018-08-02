@@ -50,8 +50,10 @@ Inexpensive Arduino Speedometer
 #### [UPDATE]: [Noise_Control](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png):
     As mentioned in the Readme section "implementation detail", when the photoresistor is under a constant
     light intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light
-    sensor value randomly deviate between two adjacent integers under no light differential. Resulting to 
-    beautiful discrete light values.
+    sensor value randomly deviate between two adjacent integers under no light differential. Therefore,
+    as a solution: once the current light value has a differential greater than 1.0 then the current
+    sensor reading is validated, otherwise the current light value is considered noise and thus disregarded.
+    Resulting to beautiful discrete light values.
 __Before:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/No_Noise_Control.png "No Noise Control")
 __After:__
