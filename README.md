@@ -27,33 +27,30 @@ Inexpensive Arduino Speedometer
 ### [Images](https://github.com/jimenezjose/Arduino_Speedometer/tree/master/Images):
 
 ####  [Protype_Concept](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg):
-    What do you mean by only a photoresistor, an LED, and a white strip of 
-    of paper? 
+    What do you mean by only a photoresistor, an LED, and a white strip of of paper? 
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Prototype_Concept.jpg "Prototype")
 
 ####  [Speedometer_data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png):
-    Real data from the a rotating wheel with a 0.25 SIGNIFICANT_SCORE.
-    Every peak of light sensor data is the white strip of paper! 
+    Real data from the a rotating wheel with a 0.25 SIGNIFICANT_SCORE. Every peak of light sensor data is 
+    the white strip of paper! 
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png "Speedometer data")
     
 ####  [Full_Throttle_Data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Full_Throttle_Data.png):
-    Real data from Arduino's Serial plotter with a SIGNIFICANT_SCORE = 0.
-    This decision is evident in the data as, the peaks may have been missed
-    if the revolution threshold was not equal to the mean.
+    Real data from Arduino's Serial plotter with a SIGNIFICANT_SCORE = 0. This decision is evident in the
+    data as, the peaks may have been missed if the revolution threshold was not equal to the mean.
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Full_Throttle_Data.png "Full Throttle data")
   
 ####  [Revolutions_Missed](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png):
     Real data from the rotating wheel showing how a wrong revolution threshold 
-    (SIGNIFICANT_SCORE deviations from the mean) may result in missing a rotation. 
-    The circled sections from the image demonstrate how a peak did not surpass the 
-    green line (revolution threshold) and hence missing a wheel rotation.
+    (SIGNIFICANT_SCORE deviations from the mean) may result in missing a rotation. The circled sections
+    from the image demonstrate how a peak did not surpass the green line (revolution threshold) and hence 
+    missing a wheel rotation.
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png "Revolutions Missed")
 
 #### [UPDATE]: [Noise_Control](../):
-    As mentioned in the Readme section "implementation detail", when the 
-    photoresistor is under a constant light intensity, the light sensor values 
-    deviate with a standard deviation of 1.0. Meaning the light sensor value randomly
-    deviate between two adjacent integers under no light differential. Resulting to 
+    As mentioned in the Readme section "implementation detail", when the photoresistor is under a constant
+    light intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light
+    sensor value randomly deviate between two adjacent integers under no light differential. Resulting to 
     beautiful discrete light values.
 
              
