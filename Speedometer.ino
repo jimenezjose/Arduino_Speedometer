@@ -1,7 +1,7 @@
 /****************************************************************************
 
                                                 Jose Jorge Jimenez-Olivas
-                                                July 27, 2018
+                                                August 1, 2018
 
                             Speedometer
 
@@ -15,7 +15,7 @@ Description:     With a white strip of paper, a photoresister, and an
                  (skewed mean compaered to a mean from a non-rotating wheel)
 ****************************************************************************/
 #define SAMPLE_SIZE 100
-#define SIGNIFICANT_SCORE 0  /* Number of Standard Deviations from the Mean */
+#define SIGNIFICANT_SCORE 0.01  /* Number of Standard Deviations from the Mean */
 
 void populateData( int *, int, const int );
 double getAverage( int *, int );
@@ -30,7 +30,10 @@ double stanDev = 0;              /* standard deviation from data */
 boolean reading = true;          /* ready for white line to pass */
 unsigned long previousMillis = 0;/* used for calculating time without delays */
 long revolutions = 0;            /* revoultions of wheel */
-long maxRPM = 0;
+long maxRPM = 0;                 /* max rpm in duration of program */
+
+long temp = 0; //TODO
+int prevLight = 0;
 
 void setup() {
   Serial.begin( 9600 );
@@ -54,45 +57,52 @@ void setup() {
 void loop() {
 
   int currLight = analogRead( sensorPin );
+
+  /* Noise Control -- avoid currLight to bounce between two adjacent values */
+  ( abs(currLight - prevLight) > 1 ) ? prevLight = currLight : currLight = prevLight;
+  
   double Z_Score = (currLight - average) / stanDev;
+  long rpm;
       
   if( reading && Z_Score > SIGNIFICANT_SCORE ) {
-    /* 1 revolution noted */
+    /* 1 revolution noted, beginning of peak */
     revolutions++;
+    temp++;
     reading = false;
   }
   else if( !reading && Z_Score <= SIGNIFICANT_SCORE) {
+    /* peak fell below Z_Score threshold */
     reading = true;
   }
 
   unsigned long currentMillis = millis();
-  if( revolutions /*&& currentMillis - previousMillis >= ONE_SECOND*/ ) {
+  if( revolutions ) {
     /* revolutions per minute */
     double dt = currentMillis - previousMillis;
-    dt = dt * (1.0 / 1000) * ( 1.0 / 60);
-    long rpm = revolutions / dt;
+    dt = dt * (1.0 / 1000);// * ( 1.0 / 60);
+    //Serial.print( "delta time: " );
+    //Serial.println( dt );
+    rpm = revolutions / dt;
     //Serial.print( "rpm: " );
     //Serial.println( rpm );
     previousMillis = currentMillis;
-    //revolutions = 0;
-
-    if( revolutions > average + stanDev * SIGNIFICANT_SCORE ) {
-      revolutions = 0;
-    }
+    revolutions = 0;
+    
     if( rpm > maxRPM ) {
       /* new max */
       maxRPM = rpm;
     }
   }
-
-    Serial.print( revolutions );
+ 
+    Serial.print( /*revolutions*/ temp );
     Serial.print( "\t" );
     //Serial.print( "Y: " );
     Serial.print( currLight );
     Serial.print( "\t" );
     Serial.print( average + SIGNIFICANT_SCORE * stanDev );
     Serial.print( "\t" );
-    Serial.println( average );
+    Serial.println( rpm );
+    
 
 }
 
