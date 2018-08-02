@@ -57,5 +57,6 @@ Inexpensive Arduino Speedometer
 __Before:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/No_Noise_Control.png "No Noise Control")
 __After:__
-![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")         
-
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")
+__New_Speedometer_data__:
+![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control2.png "Noise Control2")
