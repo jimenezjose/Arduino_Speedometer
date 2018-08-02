@@ -47,7 +47,7 @@ Inexpensive Arduino Speedometer
     missing a wheel rotation.
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png "Revolutions Missed")
 
-#### [UPDATE]: [Noise_Control](../):
+#### [UPDATE]: [Noise_Control](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png):
     As mentioned in the Readme section "implementation detail", when the photoresistor is under a constant
     light intensity, the light sensor values deviate with a standard deviation of 1.0. Meaning the light
     sensor value randomly deviate between two adjacent integers under no light differential. Resulting to 
