@@ -54,6 +54,6 @@ Inexpensive Arduino Speedometer
     beautiful discrete light values.
 __Before:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/No_Noise_Control.png "No Noise Control")
-__Now:__
+__After:__
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Noise_Control.png "Noise Control")         
 
