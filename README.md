@@ -16,9 +16,11 @@ Inexpensive Arduino Speedometer
 ### Implementation details:
       The light intensity of the black wheel has a standard  deviation 1.0. Meaning when the photoresistor
     is under one contant light intensity, its sensor value deviates randomly between two adjacent integers.
-    Although, I am for the standard deviation of the wheels data, I noted that it may not always be  
+    Although, I calculate for the standard deviation of the wheels data, I noted that it may not always be  
     necessary. Hence for the symbolic constant SIGNIFICANT_SCORE = 0 in the code. Of course if necessary,  
-    under noisy conditions the SIGNIFICANT_SCORE value should be increased. 
+    under noisy conditions the SIGNIFICANT_SCORE value should be increased. The SIGNIFICANT_SCORE is what I
+    call the revolution threshold, in the images posted, it is labeled as the number of standard deviations
+    from the mean.
       Also, to be noted, as the rpms increase the light intensity received from the photoresistor decreases 
     significantly. Hence with an incorrect revolution threshold (average + SIGNIFICANT_SCORE * stanDev), 
     it may be possible that the white piece of paper may not be noted. For more insight look at 
