@@ -34,12 +34,13 @@ Inexpensive Arduino Speedometer
 
 ####  [Speedometer_data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png):
     Real data from the a rotating wheel with a 0.25 SIGNIFICANT_SCORE (revolution threshold - stanDev from 
-    the mean). Every peak of light sensor data is the white strip of paper! 
+    the mean). Every peak of the light sensor data is the white strip of paper! 
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Speedometer_data.png "Speedometer data")
     
 ####  [Full_Throttle_Data](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Full_Throttle_Data.png):
-    Real data from Arduino's Serial plotter with a SIGNIFICANT_SCORE = 0. This decision is evident in the
-    data as, the peaks may have been missed if the revolution threshold was not equal to the mean.
+    Real data from Arduino's Serial plotter with a SIGNIFICANT_SCORE = 0 (revolution threshold - stanDev from
+    the mean). The decision of assigning SIGNIFICANT_SCORE to 0 is evident in the data as, the peaks may have 
+    been missed if the revolution threshold was not equal to the mean ( 0 standard Deviations from the mean ).
 ![alt text]( https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Full_Throttle_Data.png "Full Throttle data")
   
 ####  [Revolutions_Missed](https://github.com/jimenezjose/Arduino_Speedometer/blob/master/Images/Revolutions_Missed.png):
